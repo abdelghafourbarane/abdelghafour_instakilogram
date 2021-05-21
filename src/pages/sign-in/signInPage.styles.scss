@@ -1,0 +1,14 @@
+.sign-in-page {
+  padding: 64px 320px;
+  display: flex;
+  flex-direction: column;
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    .sign-in-image {
+      background-color: #fafafa;
+    }
+  }
+}

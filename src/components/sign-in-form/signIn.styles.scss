@@ -1,0 +1,108 @@
+.sign-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  text-align: center;
+
+  .sign-in-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d1d9d9;
+    text-align: center;
+    padding: 16px 24px;
+    background-color: #ffff;
+
+    .logo-container {
+      padding: 16px 40px 32px;
+      .logo-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    form {
+      width: 100%;
+      margin-bottom: 16px;
+      .inputs-container {
+        margin-bottom: 16px;
+        .form-control {
+          margin-bottom: 8px;
+          height: 32px;
+          font-size: 12px;
+          background-color: #fafafa;
+        }
+      }
+      button {
+        height: 32px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    .or-lines-group {
+      display: flex;
+      flex-direction: row;
+      // justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      width: 100%;
+
+      span {
+        color: #8e8e8e;
+        font-weight: bold;
+      }
+
+      .or-line {
+        border-bottom: solid 1px #d1d9d9;
+        width: 100%;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #606470;
+      span {
+        font-weight: bold;
+
+        i {
+          color: #4267b2;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .sign-up-container {
+    border: 1px solid #d1d9d9;
+    margin-top: 8px;
+    padding: 16px 0px;
+    display: table-cell;
+    text-align: center;
+    margin-bottom: 24px;
+    background-color: #ffff;
+    span {
+      vertical-align: middle;
+      font-size: 14px;
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+  .download-container {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    gap: 8px;
+    width: 306px;
+    margin-top: 24px;
+    padding: 0px 24px;
+    div {
+      width: 50%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
