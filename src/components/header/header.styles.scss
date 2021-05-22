@@ -1,0 +1,48 @@
+.header {
+  height: 53px;
+  background-color: #ffff;
+  padding: 0 207px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #d1d9d9;
+  align-content: center;
+  //   flex-basis: 0;
+  .logo-container {
+    padding: 6px 0 4px;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .search-container {
+    padding: 12px 0;
+    margin-left: 60px;
+    input {
+      height: 100%;
+      width: 213px;
+      background-color: #fafafa;
+      text-align: center;
+      font-size: 14px;
+      font-family: FontAwesome, "Roboto", "Segoe UI", "San Francisco", "Arial";
+    }
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 13px 0;
+    img {
+      height: 100%;
+      width: auto;
+      border-radius: 50%;
+    }
+
+    i {
+      font-size: 24px;
+      margin: auto;
+    }
+  }
+}
