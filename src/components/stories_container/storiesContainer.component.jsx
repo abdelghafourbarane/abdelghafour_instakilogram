@@ -35,6 +35,11 @@ const storiesList = [
     imageUrl:
       "https://images.daznservices.com/di/library/GOAL/f2/b6/toni-kroos-alemania_161h509ihxni61dfkz2jjqxgqd.jpg?t=-2073460248&quality=60&w=1200&h=800",
   },
+  {
+    username: "mo_salah",
+    imageUrl:
+      "https://www.africatopsports.com/wp-content/uploads/2021/04/Mohamed-Salah.jpg",
+  },
 ];
 
 class StoriesContainer extends React.Component {

@@ -12,7 +12,9 @@ class StoryItem extends React.Component {
     return (
       <div className="story-item">
         <div className="story-border">
-          <img src={imageUrl} alt={username} />
+          <div className="inner-circle">
+            <img src={imageUrl} alt={username} />
+          </div>
         </div>
         <span>{username}</span>
       </div>
