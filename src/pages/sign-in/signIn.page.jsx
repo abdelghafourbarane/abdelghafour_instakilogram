@@ -8,7 +8,7 @@ const SignInPage = () => (
   <div className="sign-in-page">
     <div className="main-container">
       <div className="sign-in-image">
-        <img src={PhoneImage} />
+        <img src={PhoneImage} alt="phones" />
       </div>
       <SignInForm />
     </div>

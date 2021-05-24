@@ -10,7 +10,7 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="logo-container">
-          <img src={InstagramLogo} />
+          <img src={InstagramLogo} alt="insta logo" />
         </div>
         <div className="search-container">
           <input
@@ -24,7 +24,7 @@ class Header extends React.Component {
           <i class="fas fa-paper-plane"></i>
           <i class="far fa-compass"></i>
           <i class="far fa-heart"></i>
-          <img src={AbdoPhoto} />
+          <img src={AbdoPhoto} alt="profil pic" />
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ class SignInForm extends React.Component {
       <div className="sign-container">
         <div className="sign-in-form-container">
           <div className="logo-container">
-            <img className="logo-image" src={InstagramLogo} />
+            <img className="logo-image" src={InstagramLogo} alt="insta logo" />
           </div>
           <form>
             <div className="inputs-container">
@@ -34,27 +34,27 @@ class SignInForm extends React.Component {
             <span>OR</span>
             <div className="or-line"></div>
           </div>
-          <a href="#">
+          <a href="/#">
             <span>
               <i class="fab fa-facebook-square"></i> Login with facebook
             </span>
           </a>
           <div style={{ marginTop: "24px", fontSize: "12px" }}>
-            <a href="#">Forgot password?</a>
+            <a href="/#">Forgot password?</a>
           </div>
         </div>
         <div className="sign-up-container">
           <span>
-            Don't have an acount? <a href="#">Sign up</a>
+            Don't have an acount? <a href="/#">Sign up</a>
           </span>
         </div>
         <span>Get the app.</span>
         <div className="download-container">
           <div>
-            <img src={AppStoreDownloadImage} />
+            <img src={AppStoreDownloadImage} alt="appstore download pic" />
           </div>
           <div>
-            <img src={GooglePlayDownloadImage} />
+            <img src={GooglePlayDownloadImage} alt="google play download pic" />
           </div>
         </div>
       </div>

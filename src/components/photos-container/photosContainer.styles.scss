@@ -1,0 +1,11 @@
+.photos-container {
+  //   width: 618px;
+  display: flex;
+  flex-direction: column;
+
+  .photos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+}

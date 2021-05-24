@@ -1,0 +1,77 @@
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d1d9d9;
+  background-color: #fff;
+  border-radius: 3px;
+
+  .photo-header {
+    height: 59px;
+    padding: 13px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+
+    .photo-owner-container {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      gap: 16px;
+      font-weight: 600;
+
+      img {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      span {
+        margin: auto;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .reactions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 13px 16px;
+    font-size: 24px;
+
+    :first-child {
+      display: flex;
+      flex-direction: row;
+      gap: 18px;
+    }
+  }
+
+  .likes-number {
+    font-size: 14px;
+
+    font-weight: 600;
+    margin-left: 16px;
+  }
+
+  .photo-content-container {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .comments-container {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .comment-date {
+    font-size: 10px;
+    margin: 10px 16px;
+    color: #8e8e8e;
+  }
+}

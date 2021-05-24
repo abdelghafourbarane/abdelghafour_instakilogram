@@ -1,0 +1,39 @@
+.comment-input-container {
+  form {
+    border-top: 1px solid #d1d9d9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 55px;
+    padding: 0 16px;
+    // justify-content: space-between;
+    :first-child {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-start;
+      .form-control {
+        border: none;
+        font-size: 14px;
+        width: 100%;
+      }
+
+      i {
+        font-size: 25px;
+        width: auto;
+      }
+    }
+    .post-comment-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: #94d0cc;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
