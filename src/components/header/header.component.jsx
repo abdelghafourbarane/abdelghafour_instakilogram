@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import "./header.styles.scss";
 
@@ -7,6 +8,8 @@ import AbdoPhoto from "../../Assets/abdo_photo.jpeg";
 
 class Header extends React.Component {
   render() {
+    const { currentUser } = this.props;
+    const profilImageUrl = currentUser ? currentUser.profil_image : null;
     return (
       <div className="header">
         <div className="logo-container">
@@ -24,10 +27,14 @@ class Header extends React.Component {
           <i class="fas fa-paper-plane"></i>
           <i class="far fa-compass"></i>
           <i class="far fa-heart"></i>
-          <img src={AbdoPhoto} alt="profil pic" />
+          <img src={profilImageUrl} alt="profil pic" />
         </div>
       </div>
     );
   }
 }
-export default Header;
+
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+export default connect(mapStateToProps)(Header);

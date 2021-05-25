@@ -1,19 +1,25 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import StoriesContainer from "../stories_container/storiesContainer.component";
 import PhotoContainer from "../photo-container/photoContainer.component";
 
+import { fetchPhotos } from "../../redux/photos/photos.actions";
+
 import "./photosContainer.styles.scss";
 
-import PUBLICATIONS from "./photosContainer.data";
-
 class PhotosContainer extends React.Component {
+  componentDidMount() {
+    const { fetchPhotos } = this.props;
+    fetchPhotos();
+  }
   render() {
+    const publications = this.props.photos ? this.props.photos.photos : [];
     return (
       <div className="photos-container">
         <StoriesContainer />
         <div className="photos-list">
-          {PUBLICATIONS.map((publication) => (
+          {publications.map((publication) => (
             <PhotoContainer {...publication} />
           ))}
         </div>
@@ -22,4 +28,12 @@ class PhotosContainer extends React.Component {
   }
 }
 
-export default PhotosContainer;
+const mapDispatchToProps = (dispatch) => ({
+  fetchPhotos: () => dispatch(fetchPhotos()),
+});
+
+const mapStateToProps = (state) => ({
+  photos: state.photos,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(PhotosContainer);

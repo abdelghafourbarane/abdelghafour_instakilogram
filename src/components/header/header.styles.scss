@@ -35,9 +35,10 @@
     gap: 24px;
     padding: 13px 0;
     img {
-      height: 100%;
-      width: auto;
+      height: 24px;
+      width: 24px;
       border-radius: 50%;
+      object-fit: cover;
     }
 
     i {
