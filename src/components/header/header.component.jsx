@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import "./header.styles.scss";
 
 import InstagramLogo from "../../Assets/instagram_logo.png";
-import AbdoPhoto from "../../Assets/abdo_photo.jpeg";
 
 class Header extends React.Component {
   render() {

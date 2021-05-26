@@ -1,0 +1,44 @@
+.suggestion-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  div:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    img {
+      height: 32px;
+      width: 32px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    div:last-child {
+      display: flex;
+      flex-direction: column;
+
+      .username {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+      }
+      span:last-child {
+        font-size: 12px;
+        line-height: 14px;
+        color: #8e8e8e;
+      }
+    }
+  }
+  .follow-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0095fe;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

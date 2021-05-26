@@ -7,8 +7,7 @@ import "./photoContainer.styles.scss";
 
 class PhotoContainer extends React.Component {
   render() {
-    const { id, content, published_by, photo_url, comments, liked_by } =
-      this.props;
+    const { content, published_by, photo_url, comments, liked_by } = this.props;
     return (
       <div className="photo-container">
         <div className="photo-header">

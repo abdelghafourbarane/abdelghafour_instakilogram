@@ -1,0 +1,95 @@
+.follow-container {
+  padding: 24px 0 0 28px;
+  margin: 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 18px;
+
+  .switch-text {
+    color: #0095fe;
+    font-weight: 600;
+    font-size: 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .current-user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    :first-child {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      img {
+        height: 56px;
+        width: 56px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: auto;
+      }
+      :last-child {
+        .username {
+          font-weight: 600;
+        }
+        .fullName {
+          color: #8e8e8e;
+        }
+      }
+    }
+  }
+
+  .suggestions-container {
+    .suggestions-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      :first-child {
+        font-weight: 600;
+        color: #8e8e8e;
+      }
+      :last-child {
+        font-size: 12px;
+        font-weight: 600;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .suggestions-list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 16px 0 40px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    line-height: 18px;
+    color: #c7c7c7;
+    margin-top: 0;
+    gap: 16px;
+
+    span {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    div:first-child {
+      display: flexbox;
+      flex-direction: row;
+    }
+  }
+}
