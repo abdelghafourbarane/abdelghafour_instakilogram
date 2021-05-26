@@ -3,7 +3,7 @@ import "./suggestionContainer.styles.scss";
 const SuggestionContainer = ({ username, profil_image }) => (
   <div className="suggestion-container">
     <div>
-      <img src={profil_image} />
+      <img src={profil_image} alt={username} />
       <div>
         <span className="username">{username}</span>
         <span>Follows you</span>

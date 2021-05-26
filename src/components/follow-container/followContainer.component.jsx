@@ -26,7 +26,7 @@ class FollowContainer extends React.Component {
       <div className="follow-container">
         <div className="current-user-container">
           <div>
-            <img src={profilPhoto} />
+            <img src={profilPhoto} alt={username} />
             <div>
               <span className="username">{username}</span>
               <span className="fullName">{fullName}</span>

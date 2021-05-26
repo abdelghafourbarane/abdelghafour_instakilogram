@@ -6,6 +6,7 @@ import { getCurrentUser } from "./redux/user/user.actions";
 
 import SignInPage from "./pages/sign-in/signIn.page";
 import HomePage from "./pages/homepage/homepage.page";
+import Header from "../src/components/header/header.component";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Route path="/signin" component={SignInPage} exact />
+        <Route path="/" component={Header} />
         <Route path="/" component={HomePage} exact />
       </BrowserRouter>
     );

@@ -7,6 +7,9 @@
   justify-content: space-between;
   border-bottom: 1px solid #d1d9d9;
   align-content: center;
+  position: fixed;
+  width: 100%;
+
   //   flex-basis: 0;
   .logo-container {
     padding: 6px 0 4px;
@@ -26,6 +29,7 @@
       background-color: #fafafa;
       text-align: center;
       font-size: 14px;
+      font-weight: 300;
       font-family: FontAwesome, "Roboto", "Segoe UI", "San Francisco", "Arial";
     }
   }
