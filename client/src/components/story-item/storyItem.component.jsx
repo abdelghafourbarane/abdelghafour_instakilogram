@@ -10,7 +10,7 @@ class StoryItem extends React.Component {
   render() {
     const { username, imageUrl } = this.props;
     return (
-      <div className="story-item">
+      <div className="story-item ">
         <div className="story-border">
           <div className="inner-circle">
             <img src={imageUrl} alt={username} />

@@ -2,6 +2,7 @@
   //   width: 618px;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 
   .photos-list {
     display: flex;
