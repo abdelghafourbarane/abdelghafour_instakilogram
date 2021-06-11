@@ -36,7 +36,8 @@ class SignInForm extends React.Component {
           </div>
           <a href="/#">
             <span>
-              <i class="fab fa-facebook-square"></i> Login with facebook
+              <i class="fab fa-facebook-square"></i>{" "}
+              <a href="/login/facebook">Login with facebook</a>
             </span>
           </a>
           <div style={{ marginTop: "24px", fontSize: "12px" }}>
