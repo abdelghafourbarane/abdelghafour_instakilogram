@@ -1,24 +1,34 @@
 import mongoose from "mongoose";
 
-import Photo from "./Photo.js";
+const { Schema } = mongoose;
 
-const userSchema = mongoose.Schema({
-  username: String,
-  profilePhoto: Photo,
-  firstName: String,
-  lastName: String,
-  followers: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+const userSchema = new Schema(
+  {
+    username: {
+      type: String,
+      default: "",
     },
-  ],
-  createdAt: {
-    type: Date,
-    default: new Date(),
+    profilePhoto: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Photo",
+    },
+    firstName: { type: String, default: "" },
+    lastName: { type: String, default: "" },
+    facebook_id: { type: String, default: "" },
+    followers: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
+    // createdAt: {
+    //   type: Date,
+    //   default: new Date(),
+    // },
   },
-});
+  { timestamps: true }
+);
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("users", userSchema);
 
 export default User;
