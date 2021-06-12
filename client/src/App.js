@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import { getCurrentUser } from "./redux/user/user.actions";
 import { getCurrentUserFromDBStart } from "./redux/user/user.actions";
@@ -13,18 +13,23 @@ import "./App.css";
 
 class App extends React.Component {
   componentDidMount() {
+    console.log("component did mount");
     const currentUser = this.props.getCurrentUser;
     const currentUserFromDB = this.props.getCurrentUserFromDB;
     currentUser();
     currentUserFromDB();
   }
+
   render() {
+    console.log("currentUserFromDB:", this.props.currentUserDB);
     return (
-      <BrowserRouter>
+      <div>
         <Route path="/signin" component={SignInPage} exact />
         <Route path="/" component={Header} />
-        <Route path="/" component={HomePage} exact />
-      </BrowserRouter>
+        <Route path="/" exact>
+          {this.props.currentUserDB ? <HomePage /> : null}
+        </Route>
+      </div>
     );
   }
 }
@@ -34,4 +39,8 @@ const mapDispatchToProps = (dipsatch) => ({
   getCurrentUserFromDB: () => dipsatch(getCurrentUserFromDBStart()),
 });
 
-export default connect(null, mapDispatchToProps)(App);
+const mapStateToProps = (state) => ({
+  currentUserDB: state.user.currentUserDB,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
