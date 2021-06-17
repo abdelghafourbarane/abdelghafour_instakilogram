@@ -5,6 +5,7 @@ import storage from "redux-persist/lib/storage";
 import userReducer from "./user/user.reducer";
 import photoReducer from "./photos/photos.reducer";
 import suggestionsReducer from "./suggestions/suggestions.reducer";
+import dropDownReducer from "./dropdown/dropdown.reducer";
 
 const persistConfig = {
   key: "root",
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   photos: photoReducer,
   suggestions: suggestionsReducer,
+  dropdown: dropDownReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

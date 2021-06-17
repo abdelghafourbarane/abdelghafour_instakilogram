@@ -26,9 +26,7 @@ class App extends React.Component {
       <div>
         <Route path="/signin" component={SignInPage} exact />
         <Route path="/" component={Header} />
-        <Route path="/" exact>
-          {this.props.currentUserDB ? <HomePage /> : null}
-        </Route>
+        <Route path="/" component={HomePage} exact />
       </div>
     );
   }

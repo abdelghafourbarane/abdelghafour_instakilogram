@@ -24,6 +24,18 @@ const userReducer = (state = INITIAL_STATE, action) => {
         errorMessage: action.payload,
       };
 
+    case userTypes.LOGOUT_SUCCESS:
+      return {
+        ...state,
+        currentUserDB: action.payload,
+      };
+
+    case userTypes.LOGOUT_FAILURE:
+      return {
+        ...state,
+        errorMessage: action.payload,
+      };
+
     default:
       return state;
   }

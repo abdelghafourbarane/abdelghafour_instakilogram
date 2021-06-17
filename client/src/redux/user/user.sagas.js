@@ -6,6 +6,8 @@ import userActionsTypes from "./user.types";
 import {
   getCurrentUserDBSucced,
   getCurrentUserDBFailure,
+  logoutFailure,
+  logoutSuccess,
 } from "./user.actions";
 
 export function* getCurrentUserFromDB() {
@@ -17,6 +19,15 @@ export function* getCurrentUserFromDB() {
   }
 }
 
+export function* logoutUser() {
+  try {
+    const user = yield axios.get("http://localhost:3000/login/logout");
+    yield put(logoutSuccess(user.data));
+  } catch (error) {
+    yield put(logoutFailure(error));
+  }
+}
+
 export function* onGetCurrentUserStart() {
   yield takeLatest(
     userActionsTypes.GET_CURRENT_USER_FROM_DB_START,
@@ -24,6 +35,10 @@ export function* onGetCurrentUserStart() {
   );
 }
 
+export function* onLogoutStart() {
+  yield takeLatest(userActionsTypes.LOGOUT_START, logoutUser);
+}
+
 export function* userSagas() {
-  yield all([call(onGetCurrentUserStart)]);
+  yield all([call(onGetCurrentUserStart), call(onLogoutStart)]);
 }

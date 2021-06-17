@@ -29,7 +29,7 @@ router.get("/currentUser", requireLogin, (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.logOut();
-  res.redirect("/");
+  res.send(req.user);
 });
 
 export default router;

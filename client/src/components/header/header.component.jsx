@@ -3,12 +3,15 @@ import { connect } from "react-redux";
 
 import "./header.styles.scss";
 
+import { toggleDropDownProfile } from "../../redux/dropdown/dropdown.actions";
+
 import InstagramLogo from "../../Assets/instagram_logo.png";
 
 class Header extends React.Component {
   render() {
     const { currentUser } = this.props;
     const profilImageUrl = currentUser ? currentUser.profil_image : null;
+    const { toggleDropDown } = this.props;
     return (
       <div className="header">
         <div className="logo-container">
@@ -26,7 +29,13 @@ class Header extends React.Component {
           <i class="fas fa-paper-plane"></i>
           <i class="far fa-compass"></i>
           <i class="far fa-heart"></i>
-          <img src={profilImageUrl} alt="profil pic" />
+          <div>
+            <img
+              src={profilImageUrl}
+              alt="profil pic"
+              onClick={() => toggleDropDown()}
+            />
+          </div>
         </div>
       </div>
     );
@@ -36,4 +45,8 @@ class Header extends React.Component {
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
 });
-export default connect(mapStateToProps)(Header);
+
+const mapDispatchToProps = (dispatch) => ({
+  toggleDropDown: () => dispatch(toggleDropDownProfile()),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
